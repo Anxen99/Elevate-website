@@ -1,0 +1,507 @@
+/* ==========
+    390 x 844
+    =========*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bold-font: "Archivo Black", sans-serif;
+  --main-font: "Work Sans", sans-serif;
+  --eyebrow-font: 0.8rem "IBM Plex Mono", monospace;
+  --sky-top: #e7eef2;
+  --sky-bot: #ffffff;
+  --ink: #12213a;
+  --ink-soft: #4c5a70;
+  --amber: #f2a93b;
+  --coral: #e1594b;
+  --line: rgba(18, 33, 58, 0.12);
+  --sky-pale: #eaf4fb;
+  --sky: #cfe6f5;
+  --line: rgba(18, 33, 58, 0.12);
+}
+
+body {
+  font:
+    clamp(10px, 5vw, 20px) "Work Sans",
+    sans-serif;
+  display: grid;
+  gap: 50px;
+}
+
+/* Navigation-bar */
+.nav-bar {
+  display: none;
+}
+
+/* Cover */
+.cover {
+  background: url(photos/cover-photo.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 25vh;
+}
+
+.dark-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+}
+
+.dark-background img {
+  width: 15rem;
+}
+
+/* Introduction */
+main {
+  display: grid;
+  padding: 0 10px;
+  line-height: 1.5;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  font: var(--eyebrow-font);
+  gap: 10px;
+  margin: 15px 0;
+  color: var(--coral);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 1.5rem;
+  height: 2px;
+  background: var(--coral);
+}
+
+.intro-title h2 {
+  font-family: var(--bold-font);
+  font-size: clamp(34px, 5vw, 53px);
+}
+
+.yellow {
+  font-style: italic;
+}
+.red {
+  color: var(--coral);
+}
+.amber {
+  color: var(--amber);
+}
+.lide p {
+  color: var(--ink-soft);
+  max-width: 38ch;
+}
+.lide span {
+  font-family: "Archivo Black", sans-serif;
+  color: var(--ink);
+}
+
+.top-line {
+  width: 100%;
+  height: 1px;
+  background: rgb(221, 221, 221);
+  margin-top: 20px;
+}
+
+.level p {
+  font-family: var(--bold-font);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  padding: 15px 0;
+}
+
+.highlight {
+  font-size: 1.8rem;
+  margin-right: 20px;
+}
+
+.grey {
+  font-family: "Work Sans", sans-serif;
+  margin-left: 0.5em;
+  color: var(--ink-soft);
+}
+
+/* mission & vision */
+.mission-vision {
+  background:
+    radial-gradient(
+      ellipse 900px 500px at 50% -10%,
+      rgba(224, 174, 76, 0.22),
+      transparent 60%
+    ),
+    linear-gradient(180deg, var(--sky-pale) 0%, var(--sky) 100%);
+  padding: 20px 10px;
+}
+
+.stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.rule {
+  height: 1px;
+  background-color: rgb(205, 202, 202);
+  width: 25%;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ccf-badge {
+  width: 2.5em;
+  height: 2.5em;
+  border: 2px solid rgb(106, 212, 247);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: rgb(106, 212, 247);
+}
+
+.stage img {
+  width: 2.5em;
+  border-radius: 50%;
+  border: 2px solid var(--coral);
+  padding: 10px;
+}
+
+.container h2 {
+  font-family: var(--bold-font);
+  font-size: clamp(34px, 5vw, 53px);
+  margin: 20px 0;
+}
+
+.mv-container {
+  display: grid;
+  gap: 20px;
+}
+
+.mission-container {
+  padding: 20px;
+  border: 1px solid var(--line);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.mission-container h3 {
+  font-family: var(--bold-font);
+}
+
+.mission-container hr {
+  margin: 15px auto;
+  width: 80px;
+  background-color: var(--amber);
+  height: 2px;
+  border: none;
+}
+
+article {
+  display: flex;
+  justify-content: flex-start;
+  color: var(--ink-soft);
+  font-size: clamp(8px, 3.5vw, 15px);
+  text-align: justify;
+  margin: 20px 0;
+  line-height: 1.5;
+  margin-right: 10px;
+}
+
+.verse {
+  text-align: right;
+  margin-top: 15px;
+  color: var(--ink-soft);
+  font-size: clamp(8px, 3.5vw, 15px);
+  margin-right: 10px;
+}
+
+article::before {
+  content: "✦";
+  color: var(--amber);
+  font-size: 14px;
+  margin-right: 20px;
+}
+
+/* ministry */
+.ministry {
+  padding: 20px;
+}
+
+.ministry h2 {
+  font-family: var(--bold-font);
+  font-size: clamp(34px, 5vw, 53px);
+  margin: 20px 0;
+}
+
+.ministry-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ministry-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20vh;
+  height: 20vh;
+  border: 2px solid var(--ink-soft);
+  border-radius: 4px;
+}
+
+.ministry-box p {
+  font-size: clamp(0.8em, 4vw, 1em);
+  text-align: center;
+}
+
+.ministry-box .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: var(--ink);
+  margin-bottom: 20px;
+}
+
+.icon img {
+  width: 30px;
+}
+
+.ministry-box:is(:nth-child(2), :nth-child(3), :nth-child(6), :nth-child(7))
+  .icon
+  img {
+  filter: invert(72%) sepia(85%) saturate(1350%) hue-rotate(2deg)
+    brightness(102%) contrast(105%);
+}
+
+.ministry-box:is(:nth-child(1), :nth-child(4), :nth-child(5), :nth-child(8))
+  .icon
+  img {
+  filter: invert(65%) sepia(50%) saturate(2250%) hue-rotate(330deg)
+    brightness(101%) contrast(105%);
+}
+
+/* campus missionary */
+.missionary {
+  background: linear-gradient(180deg, #FDEBC8 0%, #F7CE7C 45%, #E8A93B 100%);
+}
+
+.missionary h2 {
+  font-family: var(--bold-font);
+  font-size: clamp(32px, 5vw, 53px);
+  margin: 20px 0;
+}
+
+.missionary-container {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.cm-container {
+  margin-top: 50px;
+}
+
+.cm-card .img-container, 
+.cm-card2 .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 500px;
+  border: 2px solid black;
+  margin: 0 auto;
+}
+
+.cm-card2 {
+  display: flex;
+  flex-direction: column-reverse; 
+  margin-top: 80px;
+}
+
+.cm-info {
+  margin-top: 20px;
+  line-height: 1.5;
+
+  .name {
+    font: clamp(20px, 6vw, 30px) var(--bold-font);
+    margin-bottom: 5px;
+  }
+
+  p:nth-of-type(2) {
+    font: 16px "IBM Plex Mono", monospace;
+  }
+
+  p:nth-of-type(3) {
+    color: var(--coral);
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  hr {
+    margin: 20px 0;
+    border: none;
+    height: 1px;
+    background-color: rgb(152, 148, 148);
+  }
+
+  .bio {
+    color: var(--ink-soft);
+  }
+}
+
+.support {
+  margin-top: 20px;
+  
+  p, div {
+    border-bottom: 1px solid rgb(152, 148, 148);
+    padding: 10px 0;
+  }
+
+  p {
+    font-family: "IBM Plex Mono", monospace;
+  }
+
+  .support-list {
+    display: flex;
+    align-items: baseline;
+    gap: 40px;
+  }
+
+  .support-list:last-of-type {
+    gap: 28px;
+  }
+}
+
+/* contact */
+.contact {
+  padding: 0 10px 50px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  h2 {
+    font-family: var(--bold-font);
+
+    span {
+      color: var(--amber)
+    }
+  }
+
+  p:nth-child(3) {
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 15px;
+    font-style: italic;
+  }
+
+  p:nth-child(4) {
+    border-top: 1px solid var(--ink-soft);
+    width: 80%;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 12px;
+  }
+}
+
+.soc-med {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  border-top: 1px solid var(--ink-soft);
+  border-bottom: 1px solid var(--ink-soft);
+  padding: 20px 0;
+
+
+  a img {
+    width: clamp(40px, 5vw, 50px);
+  }
+}
+
+
+/* 1024 x 1003 */
+@media (min-width: 1024px) {
+  .cover {
+    height: 40vh;
+  }
+
+  .dark-background img {
+    width: 20rem;
+  }
+
+  /* Introduction */
+  main {
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 100px;
+    padding: 0 50px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .intro-title .eyebrow {
+    position: absolute;
+    top: 5px;
+  }
+
+  .mission-vision {
+    padding: 20px 200px;
+  }
+
+  .mv-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .ministry {
+    padding: 20px 200px;
+  }
+
+  .ministry-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* campus missionary */
+  .missionary {
+    padding: 0 200px;
+  }
+
+  .cm-card {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    place-items: center;
+    gap: 20px;
+  }
+
+  .cm-card2 {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    place-items: center;
+    gap: 20px;
+  }
+}
